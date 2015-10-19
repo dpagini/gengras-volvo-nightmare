@@ -20,8 +20,6 @@ module.exports = {
         expand: true,
 				cwd: '<%= paths.src %>',
 				src: [
-					"contactengine.php",
-          "recaptchalib.php",
           "favicon.ico",
           "gerry-email.pdf",
           "CNAME",
