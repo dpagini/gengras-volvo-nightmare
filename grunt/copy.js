@@ -23,7 +23,9 @@ module.exports = {
 					"contactengine.php",
           "recaptchalib.php",
           "favicon.ico",
-          "gerry-email.pdf"
+          "gerry-email.pdf",
+          "CNAME",
+          "robots.txt"
 				],
         dest: '<%= paths.build %>'
       }
