@@ -4,5 +4,5 @@ module.exports = {
 		clone: "<%= paths.repo %>",
 		message: "Grunt: Publishing Update"
 	},
-	src: ['*']
+	src: ['**/*']
 };
