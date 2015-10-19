@@ -5,7 +5,7 @@ module.exports = {
       {
         expand: true,
         cwd: '<%= paths.src %>',
-				src: 'images/*',
+				src: 'images/**/*',
 				dest: '<%= paths.build %>'
       },
       // js
