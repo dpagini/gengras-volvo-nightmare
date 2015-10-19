@@ -1,0 +1,11 @@
+header {
+	width: 100%;
+	@include transition-property(all);
+	@include transition-duration(2s);
+	@include transition-timing-function(ease-in);
+	@media screen and (min-width: 610px) {
+		//background: transparent url('http://placehold.it/1500x1000') no-repeat left top;
+		background: transparent url('/images/hero.jpg') no-repeat left bottom;
+		height: 300px;
+	}
+}

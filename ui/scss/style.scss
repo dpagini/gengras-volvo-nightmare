@@ -1,0 +1,15 @@
+@import "global/base";
+
+@import "modules/layout";
+@import "modules/header";
+@import "modules/nav";
+@import "modules/aside";
+@import "modules/timeline";
+@import "modules/gallery";
+@import "modules/contact";
+@import "modules/cliffnotes";
+@import "modules/hits";
+
+.review.details {
+	display: none;
+}

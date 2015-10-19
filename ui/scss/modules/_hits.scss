@@ -1,0 +1,16 @@
+#Hits {
+	@extend %aside;
+
+	@media screen and (max-width: 779px) {
+		display: none;
+	}
+	a {
+		img {
+			display: table;
+			margin: 0 auto;
+		}
+		&:last-child {
+			display: none;
+		}
+	}
+}

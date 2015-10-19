@@ -1,0 +1,44 @@
+nav {
+	color: $color-secondary;
+	background-color: $color-primary;
+	@include transition-property(all);
+	@include transition-duration(2s);
+	@include transition-timing-function(ease-in);
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		li {
+			a {
+				display: block;
+				padding: 0.5em 1em;
+				color: inherit;
+				&:hover {
+					color: $color-primary;
+					background-color: $color-secondary;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	@media screen and (min-width: 610px) {
+		float: left;
+		width: 100%;
+		position: relative;
+		overflow: hidden;
+		ul {
+			float: left;
+			@include horizontal-list;
+			overflow: visible; /* undo sass mixin */
+			position: relative;
+			left: 50%;
+			li {
+				position: relative; 
+				right: 50%;
+				a:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}

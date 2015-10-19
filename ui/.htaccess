@@ -1,0 +1,7 @@
+ErrorDocument 503 /maintenance.html
+
+Options +FollowSymlinks
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_URI} !/(css/style\.css|maintenance\.html|images/hero\.jpg)$
+RewriteRule .* /maintenance.html [R=503,L]

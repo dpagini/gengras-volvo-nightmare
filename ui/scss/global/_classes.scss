@@ -1,0 +1,93 @@
+/* copied from Drupal 7 */
+.element-invisible {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px);
+	overflow: hidden;
+	height: 1px;
+	&.element-focusable:focus {
+		position: static !important;
+		clip: auto;
+		overflow: visible;
+		height: auto;
+	}
+}
+
+.browsehappy {
+	width: 100%;
+	margin: 0;
+	padding: 1rem;
+	background-color: #5DFC0A;
+	color: #ffffff;
+	@media screen and (min-width: 610px) {
+		position: fixed;
+		top: 0;
+	}
+}
+
+.scroll.top {
+	display: none;
+	position: fixed;
+	bottom: 30px; bottom: 3rem;
+	right: 30px; right: 3rem;
+	width: 40px; width: 4rem;
+	height: 40px; height: 4rem;
+	font-size: 0;
+	text-align: center;
+	line-height: 40px; line-height: 4rem;
+	background-color: $color-primary; // Old browsers
+	@include filter-gradient($color-primary, lighten($color-primary,10%), vertical); // IE6-9
+	@include background-image(linear-gradient(top, $color-primary 0%, lighten($color-primary,10%) 100%));
+	@include border-radius(5px);
+	@include box-shadow(rgba(50, 50, 50, 0.75) 4px 4px 10px 0px);
+
+	&:after {
+		content: "\f139";
+		font-family: FontAwesome;
+		font-size: 25px; font-size: 2.5rem;
+		color: #fff;
+		padding: 0;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+	@media screen and (max-width: 480px) {
+		bottom: 15px; bottom: 1.5rem;
+		right: 15px; bottom: 1.5rem;
+	}
+}
+
+.button {
+	display: inline-block;
+	position: relative;
+	
+	margin: 0;
+	border: 1px solid #cccccc;
+	padding: 5px 10px; padding: 0.5rem 1rem;
+	outline: 0;
+	
+	color: #ffffff;
+	font-size: 1em;
+	font-weight: bold;
+	line-height: 1;
+	text-align: center;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 1px #333333;
+
+	background-color: lighten($color-primary,50%); // Old browsers
+	@include filter-gradient(lighten($color-primary,4%), lighten($color-primary,60%), vertical); // IE6-9
+	@include background-image(linear-gradient(top, lighten($color-primary,40%) 0%, lighten($color-primary,60%) 100%));
+
+	@include box-shadow(0 1px 0 0 rgba(255,255,255,.5) inset);
+	@include border-radius(4px);
+	@include transition(opacity .15s linear);
+	@include user-select(none);
+	
+	box-sizing: content-box;
+	align-items: flex-start;
+	cursor: pointer;
+	&:after {
+		color: inherit;
+	}
+}

@@ -1,0 +1,33 @@
+html {
+	font-family: "Bitter", serif;
+	font-size: 62.5%;
+}
+body {
+	font-size: 14px;
+	font-size: 1.4rem;
+	line-height: 1.5;
+	color: #666666;
+	background-color: #eeeeee;
+}
+#{headings()} {
+	line-height: 1.2;
+	a {
+		&:link, &:visited {
+			color: inherit;
+		}
+	}
+}
+h1 {
+	color: #00002a;
+	margin: 1em 0 0.5em;
+	border-bottom: 1px solid #00002a;
+}
+p {
+	line-height: 1.5; /* W3C compliant */
+}
+a {
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
+}

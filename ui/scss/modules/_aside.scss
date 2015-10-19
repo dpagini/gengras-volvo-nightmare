@@ -1,0 +1,15 @@
+%aside {
+	@include clearfix;
+	@media screen and (min-width: 780px) {
+		background-color: lighten($color-primary,10%);
+		margin: 0 0 20px; margin: 0 0 2rem;
+		padding: 20px; padding: 2rem;
+		@include border-radius(20px);
+		@include box-shadow();
+		h2 {
+			margin: 0 0 1rem;
+			border-bottom: 1px solid $color-secondary;
+			color: $color-secondary;
+		}
+	}
+}

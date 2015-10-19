@@ -1,0 +1,22 @@
+#Gallery {
+	@extend %aside;
+	a {
+		display: inline-block;
+		width: 31%;
+		margin: 1%;
+		vertical-align: middle;
+		@include box-shadow();
+	}
+	.thumbnail {
+		display: block;
+		width: 100%;
+		&.portrait {}
+		&.landscape {}
+	}
+	@media screen and (min-width: 780px) {
+		a {
+			width: 30%;
+			vertical-align: top;
+		}
+	}
+}

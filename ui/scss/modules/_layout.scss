@@ -1,0 +1,64 @@
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#page {
+	//padding: 1em;
+	@include clearfix;
+}
+header {
+	float: left;
+}
+nav {
+	float: left;
+	width: 100%;
+}
+main {
+	@include container;
+	@include clearfix;
+	float: left;
+	padding: 0 20px; padding: 0 2rem;
+	// @include show-grid(overlay); // @TODO: what does this do?
+	@media screen and (max-width: 779px) {
+		display: flex;
+		flex-direction: column;
+	}
+	h1 {
+		order: 10;
+	}
+	#Social {
+		order: 20;
+	}
+	#Explanation {
+		order: 40;
+		@media screen and (min-width: 780px) {
+			@include span(8 of 12);
+		}
+	}
+	#Timeline {
+		order: 50;
+		@media screen and (min-width: 780px) {
+			@include span(8 of 12);
+		}
+	}
+	#Gallery {
+		order: 60;
+		@media screen and (min-width: 780px) {
+			// @include span(4 at 9 of 12);
+		}
+	}
+	#Cliffnotes {
+		order: 30;
+		@media screen and (min-width: 780px) {
+			// @include span(4 at 9 of 12);
+		}
+	}
+	#Comments {
+		order: 70;
+		clear: both;
+	}
+}
+footer {
+	float: left;
+}
